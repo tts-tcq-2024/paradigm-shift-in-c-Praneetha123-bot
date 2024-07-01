@@ -1,31 +1,34 @@
 #include <stdio.h>
 #include <assert.h>
-int isTemperatureInRange(float temperature) {
+
+bool isTemperatureInRange(float temperature) {
     return (temperature >= 0 && temperature <= 45);
 }
 
-int isSocInRange(float soc) {
+bool isSocInRange(float soc) {
     return (soc >= 20 && soc <= 80);
 }
 
-int isChargeRateInRange(float chargeRate) {
+bool isChargeRateInRange(float chargeRate) {
     return (chargeRate <= 0.8);
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-    if (!isTemperatureInRange(temperature)) {
+    bool temperatureOk = isTemperatureInRange(temperature);
+    bool socOk = isSocInRange(soc);
+    bool chargeRateOk = isChargeRateInRange(chargeRate);
+
+    if (!temperatureOk) {
         printf("Temperature out of range!\n");
-        return 0;
     }
-    if (!isSocInRange(soc)) {
+    if (!socOk) {
         printf("State of Charge out of range!\n");
-        return 0;
     }
-    if (!isChargeRateInRange(chargeRate)) {
+    if (!chargeRateOk) {
         printf("Charge Rate out of range!\n");
-        return 0;
     }
-    return 1;
+
+    return temperatureOk && socOk && chargeRateOk;
 }
 
 int main() {
@@ -34,4 +37,5 @@ int main() {
     printf("All tests passed!\n");
     return 0;
 }
+
 
