@@ -1,4 +1,6 @@
-
+#include <stdio.h>
+#include <assert.h>
+ 
 int isInRange(float value, float min, float max) {
     return (value >= min && value <= max);
 }
