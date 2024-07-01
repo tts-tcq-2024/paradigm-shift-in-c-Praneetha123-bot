@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-
+#include <stdbool.h>
 bool isTemperatureInRange(float temperature) {
     return (temperature >= 0 && temperature <= 45);
 }
