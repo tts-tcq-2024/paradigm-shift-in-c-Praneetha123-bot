@@ -9,7 +9,7 @@ enum battery_params
     SOC_LOWER_LIMIT    = 20,
     SOC_UPPER_LIMIT    = 80,
     CHARGE_LOWER_LIMIT = 0,
-    CHARGE_UPPER_LIMIT = 1
+    CHARGE_UPPER_LIMIT = 0.8
 };
 
 void printMessage(const char* message)
