@@ -16,16 +16,24 @@ void printMessage(const char* message) {
     printf("%s\n", message);
 }
 
-void CheckWarningForGivenValue(float value, float LowerLimit, float UpperLimit, const char* UpperLimitWarningMessage, const char* LowerLimitWarningMessage, BatteryParameter parameter) {
+void checkUpperLimitWarning(float value, float UpperLimit, const char* UpperLimitWarningMessage) {
     float UpperLimitTolerance = 0.5 * UpperLimit;
-    float LowerLimitTolerance = 0.5 * LowerLimit;
+    if (value >= UpperLimit - UpperLimitTolerance) {
+        printMessage(UpperLimitWarningMessage);
+    }
+}
 
+void checkLowerLimitWarning(float value, float LowerLimit, const char* LowerLimitWarningMessage) {
+    float LowerLimitTolerance = 0.5 * LowerLimit;
+    if (value <= LowerLimit + LowerLimitTolerance) {
+        printMessage(LowerLimitWarningMessage);
+    }
+}
+
+void CheckWarningForGivenValue(float value, float LowerLimit, float UpperLimit, const char* UpperLimitWarningMessage, const char* LowerLimitWarningMessage, BatteryParameter parameter) {
     if (isWarningEnabled(parameter)) {
-        if (value >= UpperLimit - UpperLimitTolerance)
-            printMessage(UpperLimitWarningMessage);
-        
-        if (value <= LowerLimit + LowerLimitTolerance)
-            printMessage(LowerLimitWarningMessage);
+        checkUpperLimitWarning(value, UpperLimit, UpperLimitWarningMessage);
+        checkLowerLimitWarning(value, LowerLimit, LowerLimitWarningMessage);
     }
 }
 
