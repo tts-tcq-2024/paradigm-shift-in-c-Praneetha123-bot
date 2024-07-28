@@ -3,14 +3,12 @@
 #include "CheckBatteryStatus.h"
 #include "WarningConfig.h"
 
-enum battery_params {
-    TEMP_LOWER_LIMIT = 0,
-    TEMP_UPPER_LIMIT = 45,
-    SOC_LOWER_LIMIT = 20,
-    SOC_UPPER_LIMIT = 80,
-    CHARGE_LOWER_LIMIT = 0,
-    CHARGE_UPPER_LIMIT = 1
-};
+#define TEMP_LOWER_LIMIT   0
+#define TEMP_UPPER_LIMIT   45
+#define SOC_LOWER_LIMIT    20
+#define SOC_UPPER_LIMIT    80
+#define CHARGE_LOWER_LIMIT 0
+#define CHARGE_UPPER_LIMIT 0.8
 
 void printMessage(const char* message) {
     printf("%s\n", message);
