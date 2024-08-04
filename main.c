@@ -11,9 +11,10 @@ int main() {
     assert(!batteryIsOk(46, 50, 0.5)); // to check value more than temperature upper limit value
     assert(batteryIsOk(2.25, 75, 0.6)); // to check value approaching lower temperature limit
     assert(batteryIsOk(42.75, 75, 0.6)); // to check value approaching higher temperature limit
-    assert(batteryIsOk(30, 24, 0.5)); // to check value approaching lower soc limit
+   assert(batteryIsOk(20, 40, 0.76)); // to check value approaching higher charge rate limit
+    assert(batteryIsOk(30, 22, 0.5)); // to check value approaching lower soc limit
     assert(batteryIsOk(30, 79, 0.5)); // to check value approaching higher soc limit
-    assert(batteryIsOk(20, 40, 0.76));
+    
     printf("All tests passed!\n");
 
     return 0;
