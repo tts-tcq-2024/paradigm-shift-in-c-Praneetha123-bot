@@ -5,7 +5,7 @@
 
 int main() {
    
-    // Get user input for warning configuration
+    // Get user input for warning configuration tuning
     getUserInput();
 
    
