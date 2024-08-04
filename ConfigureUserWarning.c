@@ -1,4 +1,4 @@
-#include "ConfigureUserWaning.h"
+#include "ConfigureUserWarning.h"
 
 int enableTemperatureWarning = 1;
 int enableSocWarning = 1;
