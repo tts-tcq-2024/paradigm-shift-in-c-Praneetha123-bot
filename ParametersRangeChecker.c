@@ -1,4 +1,4 @@
-#include "ParameterRangeChecker.h
+#include "ParametersRangeChecker.h
 
 int isSocOk(float soc) {
     checkEarlyWarning(soc, 20, 80, 4, "Warning: Approaching discharge", "Warning: Approaching charge-peak");
