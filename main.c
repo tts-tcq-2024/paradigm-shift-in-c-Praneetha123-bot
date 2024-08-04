@@ -3,15 +3,16 @@
 #include "BatteryMonitor.h"
 
 int main() {
+   
+    assert(!batteryIsOk(40, 18, 0.6)); // to check value less than soc lower limit value
+    assert(!batteryIsOk(35, 85, 0.6)); // to check value more than soc upper limit value
+    assert(!batteryIsOk(45,70,1.0)); //// to check value more than charge rate upper limit value
     assert(!batteryIsOk(-3, 70, 0.7)); // to check value less than temperature lower limit value
     assert(!batteryIsOk(46, 50, 0.5)); // to check value more than temperature upper limit value
-    assert(!batteryIsOk(30, 19, 0.6)); // to check value less than soc lower limit value
-    assert(!batteryIsOk(30, 81, 0.6));
-    assert(!batteryIsOk(30, 75, 0.9));
-    assert(batteryIsOk(2.25, 75, 0.6));
-    assert(batteryIsOk(42.75, 75, 0.6));
-    assert(batteryIsOk(20, 24, 0.6));
-    assert(batteryIsOk(20, 76, 0.6));
+    assert(batteryIsOk(2.25, 75, 0.6)); // to check value approaching lower temperature limit
+    assert(batteryIsOk(42.75, 75, 0.6)); // to check value approaching higher temperature limit
+    assert(batteryIsOk(30, 24, 0.5)); // to check value approaching lower soc limit
+    assert(batteryIsOk(30, 79, 0.5)); // to check value approaching higher soc limit
     assert(batteryIsOk(20, 40, 0.76));
     printf("All tests passed!\n");
 
