@@ -4,9 +4,11 @@
 #ifndef CHARGERATE_RANGECHECKER_H
 #define CHARGERATE_RANGECHECKER_H
 
-#ifndef VALUERANGE_CHECKER_H
-#define VALUERANGE_CHECKER_H
+#ifndef SOC_RANGECHECKER_H
+#define SOC_RANGECHECKER_H
 
 int isTemperatureOk(float temperature);
 
 int isChargeRateOk(float chargeRate);
+
+int isSocOk(float soc);
