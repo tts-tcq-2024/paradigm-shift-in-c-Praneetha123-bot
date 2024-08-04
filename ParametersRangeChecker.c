@@ -2,6 +2,7 @@
 #include "RangeChecker.h"
 #include "EarlyWarning.h"
 #include "BatteryMonitor.h"
+#include "UserWarningsTuning.h"
 
 int isSocOk(float soc) {
     if (enableSocWarning) {
