@@ -1,6 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include "BatteryMonitor.h"
+#include "UserWarningsTuning.h"
 
 int main() {
    
