@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include "WarningMessage_printer.h"
+#include "WarningMessage.h"
 
-void WarningMessage(const char* WarningMessage) {
+void printWarningMessage(const char* WarningMessage) {
     printf("%s\n", WarningMessage);
 }
