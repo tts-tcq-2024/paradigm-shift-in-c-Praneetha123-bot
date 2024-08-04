@@ -61,4 +61,4 @@ Shorten the Semantic distance
 - Apect oriented to capture repeating aspects
 
 ## Extension used
--  I am using Early Warning extension for extending and refactoring 
+-  I am implementing Early Warning extension for extending and refactoring 
