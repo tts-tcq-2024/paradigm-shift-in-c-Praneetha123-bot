@@ -3,9 +3,9 @@
 #include "BatteryMonitor.h"
 
 int main() {
-    assert(!batteryIsOk(-1, 75, 0.6));
-    assert(!batteryIsOk(46, 75, 0.6));
-    assert(!batteryIsOk(30, 19, 0.6));
+    assert(!batteryIsOk(-3, 70, 0.7)); // to check value less than temperature lower limit value
+    assert(!batteryIsOk(46, 50, 0.5)); // to check value more than temperature upper limit value
+    assert(!batteryIsOk(30, 19, 0.6)); // to check value less than soc lower limit value
     assert(!batteryIsOk(30, 81, 0.6));
     assert(!batteryIsOk(30, 75, 0.9));
     assert(batteryIsOk(2.25, 75, 0.6));
