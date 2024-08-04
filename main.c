@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
-#include "CheckBatteryStatus.h"
-#include "WarningConfig.h"
+#include "BatteryMonitor.h"
+#include "ParameterRangeChecker.h"
 
 int main() {
     assert(!batteryIsOk(-1, 75, 0.6));
