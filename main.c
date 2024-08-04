@@ -4,6 +4,10 @@
 
 int main() {
    
+    // Get user input for warning configuration
+    getUserInput();
+
+   
     assert(!batteryIsOk(40, 18, 0.6)); // to check value less than soc lower limit value
     assert(!batteryIsOk(35, 85, 0.6)); // to check value more than soc upper limit value
     assert(!batteryIsOk(45,70,1.0)); //// to check value more than charge rate upper limit value
