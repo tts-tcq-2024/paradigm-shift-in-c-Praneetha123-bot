@@ -13,6 +13,7 @@ int isChargeRateOk(float chargeRate);
 
 int isSocOk(float soc);
 
+
 #endif 
 #endif 
 #endif 
