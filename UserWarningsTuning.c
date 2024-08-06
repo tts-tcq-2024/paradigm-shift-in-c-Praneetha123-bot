@@ -4,6 +4,7 @@
 
 
 void getUserInput() {
+    
     int tempWarning, socWarning, chargeRateWarning;
 
     printf("Enable Temperature Warning? (1 for yes, 0 for no): ");
@@ -14,4 +15,5 @@ void getUserInput() {
     scanf("%d", &chargeRateWarning);
 
     configureWarnings(tempWarning, socWarning, chargeRateWarning);
+    
 }
