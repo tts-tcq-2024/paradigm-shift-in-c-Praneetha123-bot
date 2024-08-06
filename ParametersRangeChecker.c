@@ -6,7 +6,7 @@
 
 int isSocOk(float soc) {
     if (enableSocWarning) {
-        checkEarlyWarning(soc, 20, 80, 4, "Warning: Approaching discharge", "Warning: Approaching charge-peak");
+        checkEarlyWarning(soc, 20, 80, 4, "Warning: Approaching lower charge", "Warning: Approaching charge-peak");
     }
     return isValueInRange(soc, 20, 80, "State of Charge out of range!");
 }
